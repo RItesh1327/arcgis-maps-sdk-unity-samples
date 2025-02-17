@@ -956,7 +956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674790538359957214, guid: 71c126e43990139498b8761c71893200, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7674790538359957214, guid: 71c126e43990139498b8761c71893200, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2212,9 +2212,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position:
-    x: -122.4062
-    y: 37.78708
-    z: 100
+    x: 74.103
+    y: 33.796
+    z: 2500
     SRWkid: 4326
   rotation:
     Heading: 0
@@ -2236,9 +2236,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsInitialized: 1
   m_LocalPosition:
-    x: -13626195.853939604
-    y: 100
-    z: 4549390.869143297
+    x: 8249108.226253952
+    y: 2500
+    z: 4001442.592172376
   m_LocalRotation:
     value:
       x: 0
@@ -2572,19 +2572,13 @@ MonoBehaviour:
   basemapType: 0
   basemapAuthentication:
     ConfigurationIndex: -1
-  elevation: https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer
+  elevation: 
   elevationAuthentication:
     ConfigurationIndex: -1
-  elevationSources:
-  - Name: 
-    Type: 0
-    Source: https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer
-    IsEnabled: 1
-    Authentication:
-      ConfigurationIndex: -1
+  elevationSources: []
   mapElevation:
     ElevationSources:
-    - Name: Terrain3D
+    - Name: Terrain 3D
       Type: 0
       Source: https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer
       IsEnabled: 1
@@ -2605,201 +2599,12 @@ MonoBehaviour:
       x: 0
       y: 0
     UseOriginAsCenter: 0
-  layers:
-  - Name: Esri Building E
-    Type: 7
-    Source: https://tiles.arcgis.com/tiles/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Bldg_E_Color_UC2020_demo/SceneServer
-    Opacity: 1
-    IsVisible: 1
-    Authentication:
-      ConfigurationIndex: 0
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: -1
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 1
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  - Name: San Fran
-    Type: 1
-    Source: https://tiles.arcgis.com/tiles/z2tnIkrLQ2BRzr6P/arcgis/rest/services/SanFrancisco_Bldgs/SceneServer
-    Opacity: 1
-    IsVisible: 1
-    Authentication:
-      ConfigurationIndex: 0
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: -1
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 1
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  - Name: New York
-    Type: 2
-    Source: https://tiles.arcgis.com/tiles/z2tnIkrLQ2BRzr6P/arcgis/rest/services/New_York_Mesh/SceneServer
-    Opacity: 1
-    IsVisible: 1
-    Authentication:
-      ConfigurationIndex: 0
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: -1
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 1
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  - Name: Girona, Spain
-    Type: 2
-    Source: https://tiles.arcgis.com/tiles/z2tnIkrLQ2BRzr6P/arcgis/rest/services/Girona_Spain/SceneServer
-    Opacity: 1
-    IsVisible: 1
-    Authentication:
-      ConfigurationIndex: 0
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: -1
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 1
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  - Name: BSL2 Christchurch, New Zealand
-    Type: 7
-    Source: https://tiles.arcgis.com/tiles/pmcEyn9tLWCoX7Dm/arcgis/rest/services/cclibrary1_wgs84/SceneServer
-    Opacity: 1
-    IsVisible: 1
-    Authentication:
-      ConfigurationIndex: 0
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: -1
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 1
-      IsBuildingDisciplinesCategoriesFilterEnabled: 1
-      EnabledCategories: 160000000000000015000000000000001200000000000000110000000000000010000000000000000f000000000000000e000000000000000c000000000000000b000000000000000a0000000000000009000000000000000800000000000000070000000000000006000000000000000500000000000000040000000000000000000000000000000100000000000000030000000000000013000000000000001400000000000000
-      EnabledDisciplines: ffffffff030000000100000000000000
-    MeshModifications:
-      IsEnabled: 1
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  - Name: ChristChurch Buildings
-    Type: 1
-    Source: https://tiles.arcgis.com/tiles/XTtANUDT8Va4DLwI/arcgis/rest/services/Christchurch_3D_Buildings_2018_WGS84/SceneServer
-    Opacity: 1
-    IsVisible: 1
-    Authentication:
-      ConfigurationIndex: 0
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: -1
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 1
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 1
-      Polygons:
-      - Points:
-        - x: 19217964.994172063
-          y: -5393027.07744647
-          z: 9.658998489379883
-          SRWkid: 3857
-        - x: 19217832.40353867
-          y: -5393028.183071623
-          z: 9.65899658203125
-          SRWkid: 3857
-        - x: 19217833.11757752
-          y: -5392981.240248928
-          z: 9.65899658203125
-          SRWkid: 3857
-        - x: 19217980.064820256
-          y: -5392982.703670749
-          z: 9.65899658203125
-          SRWkid: 3857
-        - x: 19217979.015458073
-          y: -5393030.184406767
-          z: 9.65899658203125
-          SRWkid: 3857
-      Type: 0
-  - Name: Montreal
-    Type: 1
-    Source: https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/Building_Montreal/SceneServer
-    Opacity: 1
-    IsVisible: 1
-    Authentication:
-      ConfigurationIndex: 0
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: -1
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 1
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
-  - Name: Redlands
-    Type: 1
-    Source: https://services.arcgis.com/B7X7NCOKKXditlwZ/arcgis/rest/services/Fixed_Wireless_Assessment_WSL5/SceneServer
-    Opacity: 1
-    IsVisible: 1
-    Authentication:
-      ConfigurationIndex: 0
-    BuildingSceneLayerFilter:
-      ActiveBuildingAttributeFilterIndex: -1
-      BuildingAttributeFilters: []
-      IsBuildingAttributeFilterEnabled: 0
-      IsBuildingDisciplinesCategoriesFilterEnabled: 0
-      EnabledCategories: 
-      EnabledDisciplines: 
-    MeshModifications:
-      IsEnabled: 1
-      MeshModifications: []
-    SpatialFeatureFilter:
-      IsEnabled: 0
-      Polygons: []
-      Type: 0
+  layers: []
   originPosition:
-    x: -13626195.853939604
-    y: 4549390.869143297
-    z: 0
-    SRWkid: 3857
+    x: 74.103
+    y: 33.796
+    z: 2500
+    SRWkid: 4326
   mapType: 1
   editorModeEnabled: 1
   dataFetchWithSceneView: 1
@@ -2823,9 +2628,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_LocalPosition:
-    x: -13626195.853939604
-    y: 0
-    z: 4549390.869143297
+    x: 8249108.226253952
+    y: 2500
+    z: 4001442.592172376
   m_LocalRotation:
     value:
       x: 0
