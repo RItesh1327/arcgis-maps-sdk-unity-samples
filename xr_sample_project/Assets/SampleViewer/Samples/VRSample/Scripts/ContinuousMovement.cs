@@ -101,11 +101,10 @@ public class ContinuousMovement : MonoBehaviour
         }
 
         // Allow the player to move only when the menu UI is not up
-        if (!menuManager.menuActive)
-        {
+        
             controller.Move(direction * finalSpeed * Time.fixedDeltaTime);
             controller.Move(up * upSpeed * Time.fixedDeltaTime);
-        }
+        
     }
 
     private void FollowHeadset()
