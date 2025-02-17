@@ -14,7 +14,7 @@ public class KeyboardArea : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private void Awake()
     {
         if (keyboardController == null)
-            keyboardController = GameObject.Find("Virtual Keyboard Controller").GetComponent<OpenVirtualKeyboard>();
+            keyboardController = GameObject.Find("VRCanvas").GetComponent<OpenVirtualKeyboard>();
 
         keyboardController.onExitKeyboardArea = true;
     }
@@ -22,7 +22,7 @@ public class KeyboardArea : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private void OnEnable()
     {
         if (keyboardController == null)
-            keyboardController = GameObject.Find("Virtual Keyboard Controller").GetComponent<OpenVirtualKeyboard>();
+            keyboardController = GameObject.Find("VRCanvas").GetComponent<OpenVirtualKeyboard>();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

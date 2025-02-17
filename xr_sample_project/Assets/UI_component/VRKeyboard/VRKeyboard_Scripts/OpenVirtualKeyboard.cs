@@ -17,13 +17,13 @@ public class OpenVirtualKeyboard : MonoBehaviour
         //     canvasRectTransform = mainCanvas.GetComponent<RectTransform>();
         // }
 
-        virtualKeyboard = GameObject.Find("Virtual Keyboard").gameObject;
+        virtualKeyboard = GameObject.Find("Virtual Keyboard Controller").gameObject;
         if (virtualKeyboard == null)
             Debug.LogError("Pls drag the {Virtual Keyboard} prefabs in your scene");
         else
         {
 #if (UNITY_EDITOR)
-            print("Get the {virtual keyboard} prefabs");
+            //   print("Get the {virtual keyboard} prefabs");
 #endif
             keyboardBackground = virtualKeyboard.transform.Find("Background").gameObject.GetComponent<RectTransform>();
         }
@@ -43,13 +43,13 @@ public class OpenVirtualKeyboard : MonoBehaviour
 
     public void OnOpenVirtualKeyboard()
     {
-        if(virtualKeyboard.activeSelf)
+        if (virtualKeyboard.activeSelf)
             return;
-        
-#if(UNITY_EDITOR)
-        print("OnOpenVirtualKeyboard");
+
+#if (UNITY_EDITOR)
+        //  print("OnOpenVirtualKeyboard");
 #endif
-        
+
         SetupKeyboardSize();
 
         virtualKeyboard.SetActive(true);
@@ -57,33 +57,33 @@ public class OpenVirtualKeyboard : MonoBehaviour
 
     public void OnCloseVirtualKeyboard()
     {
-        if(!virtualKeyboard.activeSelf)
+        if (!virtualKeyboard.activeSelf)
             return;
-        
-#if(UNITY_EDITOR)
-        print("OnCloseVirtualKeyboard");
+
+#if (UNITY_EDITOR)
+        //  print("OnCloseVirtualKeyboard");
 #endif
-        
+
         virtualKeyboard.SetActive(false);
     }
 
     private void SetupKeyboardSize()
     {
         // you can uncomment when testing
-// #if(UNITY_EDITOR)
-//         print("SetupKeyboardSize");
-// #endif
+        // #if(UNITY_EDITOR)
+        //         print("SetupKeyboardSize");
+        // #endif
 
         // Vector2 interfaceSize = canvasRectTransform.sizeDelta;
         // float keyboardWidth = interfaceSize.y * .6f;
         // float keyboardHeight = interfaceSize.y * .6f;
-        
+
         float keyboardWidth = 485;
-        float keyboardHeight = 485;
-        
+        float keyboardHeight = 140.8f;
+
         // you can uncomment when testing
-#if(UNITY_EDITOR)
-         print($"interface size is {keyboardWidth} x {keyboardHeight}");
+#if (UNITY_EDITOR)
+        //    print($"interface size is {keyboardWidth} x {keyboardHeight}");
 #endif
         keyboardBackground.sizeDelta = new Vector2(keyboardWidth, keyboardHeight);
     }
