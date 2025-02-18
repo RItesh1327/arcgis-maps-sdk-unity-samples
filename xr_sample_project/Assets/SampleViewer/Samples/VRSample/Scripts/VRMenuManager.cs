@@ -6,7 +6,6 @@
 
 using System.Threading;
 using UnityEngine;
-
 using UnityEngine.InputSystem;
 
 public class VRMenuManager : MonoBehaviour
@@ -21,9 +20,19 @@ public class VRMenuManager : MonoBehaviour
     [SerializeField] private InputAction toggleMenuButton;
     [SerializeField] private Transform VRhead;
 
+
+
+    /// <summary>
+    /// Realigns the menu canvas so that it is positioned and rotated relative to the VR head.
+    /// (This rotation update occurs only when the toggle is pressed.)
+    /// </summary>
     public void RealignMenu()
     {
-        esriCanvas.transform.position = VRhead.position + new Vector3(VRhead.forward.x, 0, VRhead.forward.z).normalized * spawnDistance;
+        if (esriCanvas == null || VRhead == null || esriMenu == null)
+            return;
+
+        Vector3 forward2D = new Vector3(VRhead.forward.x, 0, VRhead.forward.z).normalized;
+        esriCanvas.transform.position = VRhead.position + forward2D * spawnDistance;
         esriCanvas.transform.LookAt(new Vector3(VRhead.position.x, esriMenu.transform.position.y, VRhead.position.z));
         esriCanvas.transform.forward *= -1;
     }
@@ -41,8 +50,9 @@ public class VRMenuManager : MonoBehaviour
             esriLogo.interactable = true;
             esriLogo.blocksRaycasts = true;
 
-            esriLogo.transform.position = VRhead.position + new Vector3(VRhead.forward.x, 0, VRhead.forward.z).normalized * 300;
-            esriLogo.transform.position += new Vector3(0, 100, 0);
+            Vector3 logoPos = VRhead.position + new Vector3(VRhead.forward.x, 0, VRhead.forward.z).normalized * 300;
+            logoPos += new Vector3(0, 100, 0);
+            esriLogo.transform.position = logoPos;
             esriLogo.transform.LookAt(new Vector3(VRhead.position.x, esriLogo.transform.position.y, VRhead.position.z));
             esriLogo.transform.forward *= -1;
         }
@@ -92,19 +102,18 @@ public class VRMenuManager : MonoBehaviour
 
     private void Start()
     {
-        // Inset logo after delay in order to get correct XROrigin location reference
+        // Insert the logo after a short delay for proper XR origin referencing.
         Invoke("InsertLogo", 0.4f);
-
         ToggleMenu(true);
     }
-    
+
     private void Update()
-{
+    {
         if (esriCanvas)
         {
             if (toggleMenuButton.triggered)
             {
-                if(esriInstructions.interactable)
+                if (esriInstructions.interactable)
                 {
                     ExitMenus();
                 }
@@ -114,8 +123,16 @@ public class VRMenuManager : MonoBehaviour
                 }
             }
 
+            // The menu canvas's rotation is updated here for toggle purposes.
             esriCanvas.transform.LookAt(new Vector3(VRhead.position.x, esriMenu.transform.position.y, VRhead.position.z));
             esriCanvas.transform.forward *= -1;
         }
+
     }
+
+    /// <summary>
+    /// Updates the compass's position and rotation so that it always follows the VR head.
+    /// This function only affects the compass (or its needle) and is independent of the menu alignment.
+    /// </summary>
+   
 }
